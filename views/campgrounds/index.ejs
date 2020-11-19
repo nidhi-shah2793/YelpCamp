@@ -1,0 +1,42 @@
+<% layout("layout/boilerplate") %>
+
+<!-- stylesheet for index page -->
+<link rel="stylesheet" href="/css/index.css">
+
+
+<!-- cluster map -->
+<div id="cluster-map" class="mb-5 mt-4"></div>
+
+<h1 class="mb-4">All campgrounds</h1>
+
+<!-- link to add new campground -->
+<!-- <div>
+    <a href=" /campgrounds/new">Add campground</a>
+</div> -->
+
+<!-- for each cmapground, make a card with all details -->
+<!-- have a link to the show page -->
+<% for( let campground of campgrounds) { %>
+<div class="card mb-4 post">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <img src=<%= campground.images[0].url %> class="card-img-top" alt="...">
+        </div>
+
+        <div class="card-body col-md-8">
+            <h5 class="card-title"> <%= campground.title %></h5>
+            <p class="card-text"><%= campground.description %></p>
+            <p class="card-text text-muted">
+                <small><%= campground.location %></small></p>
+            <a href="/campgrounds/<%= campground._id %>" class="btn">Take a closer look</a>
+        </div>
+    </div>
+</div>
+<% } %>
+
+<script>
+    const mapbox_token = "<%- process.env.MAPBOX_TOKEN %>"
+    const campgrounds = { features: <%- JSON.stringify(campgrounds) %>};
+</script>
+
+<script src="/js/clusterMap.js"></script>

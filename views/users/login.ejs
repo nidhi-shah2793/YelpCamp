@@ -1,0 +1,101 @@
+<% layout("layout/boilerplate") %>
+<link rel="stylesheet" href="/css/login.css">
+
+<div class="container-fluid" id="container" class="mb-3">
+    <div class="row">
+        <div class="col-sm-6">
+
+            <!-- for registration -->
+            <div class="form-container sign-up-container">
+                <form action="/register" , method="POST" class="needs-validation" novalidate>
+                    <h1>REGISTER</h1>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            <input type="text" class="form-control" id="username" aria-describedby="inputGroupPrepend"
+                                name="username" required>
+                            <div class="invalid-feedback">
+                                Please choose a username.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-group">
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <div class="invalid-feedback">
+                                Please mention an email.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="password" name="password" required>
+                            <div class="invalid-feedback">
+                                Please choose a password.
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="button"> Register </button>
+                </form>
+            </div>
+
+
+            <!-- for sign in -->
+            <div class="form-container sign-in-container d-flex">
+                <form action="/login" , method="POST" class="needs-validation" novalidate>
+                    <h1>Sign In</h1>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            <input type="text" class="form-control" id="username" aria-describedby="inputGroupPrepend"
+                                name="username" required>
+                            <div class="invalid-feedback">
+                                Please choose a username.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="password" name="password" required>
+                            <div class="invalid-feedback">
+                                Please choose a password.
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button">Login</button>
+                </form>
+            </div>
+
+        </div>
+        <div class="col-sm-6">
+            <!-- overlay container -->
+            <div class="overlay-container">
+                <div class="overlay">
+                    <!-- to hide registration -->
+                    <div class="overlay-panel overlay-left">
+                        <h1>Welcome Back</h1>
+                        <p>To keep camping with us, please login with your username and password.</p>
+                        <button class="ghost btn" id="signin">Sign In</button>
+                    </div>
+
+                    <!-- to hide login form -->
+                    <div class="overlay-panel overlay-right">
+                        <h1>Hello, new friend!</h1>
+                        <p>To access all the awesome camping areas, signup and start your journey with us.</p>
+                        <button class="ghost btn" id="signup">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/login.js"></script>

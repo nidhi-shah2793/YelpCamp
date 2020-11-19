@@ -1,0 +1,15 @@
+<% layout("layout/boilerplate") %>
+<link rel="stylesheet" href="/css/error.css">
+
+<div class="container-fluid d-flex flex-column h-100">
+<div class="row d-flex">
+    <div class="col-6 mx-auto">
+        <div class="alert alert-yellow" role="alert">
+            <h4 class="alert-heading">Uh oh, something went wrong :(</h4>
+            <hr>
+            <p><%=err.message%></p>
+        </div>
+    </div>
+
+</div>
+</div>

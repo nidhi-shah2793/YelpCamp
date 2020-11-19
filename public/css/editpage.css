@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@500;600;700&display=swap');
+
+body {
+    background-color:#f6f5f7;
+    height: 100%
+}
+
+#form{
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    padding: 20px;
+}
+
+h1 {
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: #BDB246
+}
+
+#form .red{
+    color: red;
+    font-weight: bold;
+}
+
+.updatebtn{
+    background-color: rgba(0,136,169,1);
+    color: white;
+    border-radius: 15px;
+    transition: transform 80ms ease-in;
+}
+
+.updatebtn:hover{
+    background-color: rgba(0,136,169,0.9);
+    color: white;
+}
+
+.updatebtn:active{
+    transform: scale(0.95);
+}
+
+.backbtn {
+    background-color:  #DA667B;
+    color: white;
+    border-radius: 15px;
+    transition: transform 80ms ease-in;
+
+}
+
+.backbtn:hover{
+    background-color: rgba(187, 77, 97, 0.9);
+    color: white
+}
+
+.backbtn:active{
+    transform: scale(0.95);
+
+}

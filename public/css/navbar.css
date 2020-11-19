@@ -1,0 +1,26 @@
+nav {
+    background-color: #24252a;
+}
+
+.nav-link, .navbar-brand, .navbar-brand:hover, #hambtn {
+    color: #edf0f1;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-link:hover{
+    color: #0088a9;
+}
+
+#button{
+    padding: 7px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    text-align: center;
+}
+
+#button:hover{
+    background-color: rgba(0,136,169,0.8);
+    color: #edf0f1;
+}
