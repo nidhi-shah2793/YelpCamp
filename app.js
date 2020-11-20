@@ -69,7 +69,7 @@ app.use(session({
     saveUninitialized: true,
     cookie: {
         httpOnly: true,
-        // secure: true,
+        secure: true,
         expires: Date.now() + 900000, //in ms
         maxAge: 900000
     }
