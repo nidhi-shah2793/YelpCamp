@@ -22,13 +22,14 @@
         <div class="col-md-4 mx-auto">
             <img src=<%= campground.images[0].url %> class="card-img-top" alt="...">
         </div>
-
-        <div class="card-body col-md-8">
+        <div class="card-body col-md-8 mx-2 mx-sm-0">
             <h5 class="card-title"> <%= campground.title %></h5>
             <p class="card-text"><%= campground.description %></p>
             <p class="card-text text-muted">
                 <small><%= campground.location %></small></p>
-            <a href="/campgrounds/<%= campground._id %>" class="btn">Take a closer look</a>
+            
+                    <a href="/campgrounds/<%= campground._id %>" class="btn">Take a closer look</a>
+                
         </div>
     </div>
 </div>

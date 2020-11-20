@@ -6,8 +6,10 @@ const Campground = require("./../models/campground")
 const cities = require("./cities")
 const { descriptors, places } = require("./seedHelpers")
 
+const dbUrl = "mongodb+srv://nidhi:72AlcuvYVswdiYnN@yelpcamp.jbwya.mongodb.net/<dbname>?retryWrites=true&w=majority"
+
 //connect to mongoose
-mongoose.connect("mongodb://localhost:27017/yelp-camp", { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
+mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
@@ -42,7 +44,7 @@ const seedDB = async () => {
                 }],
             description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate rem perferendis sed odit accusamus eos ipsam veniam, commodi saepe corporis. Vel nostrum magnam ratione quo sequi! Pariatur, fuga. Voluptate!Sit sint corporis ducimus voluptates veniam voluptas fugiat unde aperiam recusandae dignissimos repudiandae error vero, pariatur, numquam consequuntur amet odio ipsum libero doloremque, assumenda velit magnam quos esse distinctio. Vel.",
             price: Math.floor(Math.random() * 30) + 20,
-            author: "5fac2a42154edf43b07e92d3"
+            author: "5fb6d4fa058c3660a4ee6408"
         })
         const response = await geocoder.forwardGeocode({ query: camp.location, limit: 1 }).send()
         camp.geometry = response.body.features[0].geometry;
